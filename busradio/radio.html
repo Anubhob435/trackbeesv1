@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #f39c12;
+            font-size: 3rem;
+        }
+
+        .playlist {
+            margin: 20px 0;
+        }
+
+        .playlist-item {
+            background-color: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .playlist-item:hover {
+            background-color: #444;
+        }
+
+        .player {
+            margin-top: 30px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .player button {
+            background-color: #f39c12;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .player button:hover {
+            background-color: #e67e22;
+        }
+
+        .player button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Music Stream</h1>
+
+        <div class="playlist">
+            <div class="playlist-item" onclick="playSong('song1.mp3')">Song 1 - Title</div>
+            <div class="playlist-item" onclick="playSong('song2.mp3')">Song 2 - Title</div>
+            <div class="playlist-item" onclick="playSong('song3.mp3')">Song 3 - Title</div>
+            <div class="playlist-item" onclick="playSong('song4.mp3')">Song 4 - Title</div>
+        </div>
+
+        <div class="player">
+            <button id="play" onclick="playAudio()" disabled>Play</button>
+            <button id="pause" onclick="pauseAudio()" disabled>Pause</button>
+            <button id="stop" onclick="stopAudio()" disabled>Stop</button>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script>
+        let audioPlayer = document.getElementById('audioPlayer');
+        let playButton = document.getElementById('play');
+        let pauseButton = document.getElementById('pause');
+        let stopButton = document.getElementById('stop');
+
+        function playSong(song) {
+            audioPlayer.src = song;
+            audioPlayer.play();
+
+            // Enable player controls
+            playButton.disabled = false;
+            pauseButton.disabled = false;
+            stopButton.disabled = false;
+        }
+
+        function playAudio() {
+            audioPlayer.play();
+        }
+
+        function pauseAudio() {
+            audioPlayer.pause();
+        }
+
+        function stopAudio() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+    </script>
+
+</body>
+</html>
