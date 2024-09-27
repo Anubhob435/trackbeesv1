@@ -13,7 +13,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #1e1e1e;
+            color: #f8f9fa;
         }
 
         .help-container {
@@ -26,20 +27,20 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 30px;
-            color: #007bff;
+            color: #00bfff;
         }
 
         .section {
             margin-bottom: 40px;
-            background-color: #fff;
+            background-color: #2a2a2a;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .section h2 {
             font-size: 1.8rem;
-            color: #333;
+            color: #f8f9fa;
             margin-bottom: 20px;
         }
 
@@ -52,7 +53,7 @@
         }
 
         .faq-list li a {
-            color: #007bff;
+            color: #00bfff;
             text-decoration: none;
             font-size: 1rem;
             font-weight: bold;
@@ -71,12 +72,14 @@
         .contact-form label {
             font-size: 1.1rem;
             font-weight: bold;
-            color: #333;
+            color: #f8f9fa;
         }
 
         .contact-form input, .contact-form textarea {
+            background-color: #333;
+            color: #f8f9fa;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #555;
             border-radius: 8px;
             font-size: 1rem;
         }
@@ -88,7 +91,7 @@
 
         .contact-form button {
             padding: 12px;
-            background-color: #007bff;
+            background-color: #00bfff;
             color: white;
             font-size: 1rem;
             border: none;
@@ -98,18 +101,18 @@
         }
 
         .contact-form button:hover {
-            background-color: #0056b3;
+            background-color: #009acd;
         }
 
         .chat-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007bff;
+            background-color: #00bfff;
             color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             cursor: pointer;
             font-weight: bold;
         }
@@ -121,17 +124,17 @@
             right: 20px;
             width: 300px;
             height: 400px;
-            background-color: white;
-            border: 2px solid #007bff;
+            background-color: #2a2a2a;
+            border: 2px solid #00bfff;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .live-chat .chat-header {
-            background-color: #007bff;
+            background-color: #00bfff;
             color: white;
             padding: 10px;
             text-align: center;
@@ -142,6 +145,7 @@
             padding: 10px;
             overflow-y: auto;
             flex-grow: 1;
+            color: #f8f9fa;
         }
 
         .live-chat .chat-body .message {
@@ -156,13 +160,15 @@
 
         .live-chat .chat-footer input {
             flex-grow: 1;
+            background-color: #333;
+            color: #f8f9fa;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #555;
         }
 
         .live-chat .chat-footer button {
-            background-color: #007bff;
+            background-color: #00bfff;
             color: white;
             border: none;
             padding: 10px;
